@@ -1,0 +1,19 @@
+{
+  "name": "nodebird-api",
+  "version": "1.0.0",
+  "description": "Nodebird API 서버",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/woong9149/nodebird-api.git"
+  },
+  "author": "woong9149",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/woong9149/nodebird-api/issues"
+  },
+  "homepage": "https://github.com/woong9149/nodebird-api#readme"
+}
