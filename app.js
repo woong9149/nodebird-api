@@ -26,6 +26,21 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.join());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser(process.env.COOKIE_SECRET));
+app.use(session({
+    resave: false,
+    saveUninitialized: false,
+    secret: process.env.COOKIE_SECRET,
+    cookie: {
+        httpOnly: true,
+        secure: false,
+    }
+}));
+app.use(flash());
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use('/auth', authRouter);
+app.use('/', indexRouter);
 
 
 
